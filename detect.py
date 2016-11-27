@@ -508,7 +508,6 @@ for s in clocks:
                 wskazowki.append((avg_cent, h[1]))
                 dl.append(distance(avg_cent, h[1]))
 
-        clock_dim=
         if len(wskazowki)==2:
             if dl[0]>dl[1]:
                 godz = wskazowki[1]
@@ -538,7 +537,6 @@ for s in clocks:
             if fin_godz == -1:
                 fin_godz = 11
             
-            all_times.append(fin_godz, fin_min, 0, uldr_, avg_cent)
             print("Possible Time: "+str(fin_godz) + ":" + str(fin_min) + ":00")
             fw.write("Possible Time: "+str(fin_godz)+":"+str(fin_min)+":00"+"\n")
             #print("min", fin_min)
@@ -597,7 +595,6 @@ for s in clocks:
             if fin_sek == 60:
                 str_sek = 0
 
-            all_times.append(fin_godz, fin_min, 0, uldr_, avg_cent)
             print("Possible Time: "+str(fin_godz)+":"+str(fin_min)+":"+str(fin_sek))
             fw.write("Possible Time: "+str(fin_godz)+":"+str(fin_min)+":"+str(fin_sek)+"\n")
             #print("sek", fin_sek)
@@ -609,7 +606,6 @@ for s in clocks:
 
 
 
-    print all_times
     fw.flush()
     plt.savefig("finals/" + s.split("/")[-1])
     plt.close()
